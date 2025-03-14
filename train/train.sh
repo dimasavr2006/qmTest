@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Dataset.
-dataset=QM9under7atoms_atomizationenergy_eV
+# dataset=QM9under7atoms_atomizationenergy_eV
 # dataset=QM9under14atoms_atomizationenergy_eV
 # dataset=QM9full_atomizationenergy_eV
-# dataset=QM9under7atoms_homolumo_eV  # Train homo and lumo simultaneously.
+dataset=QM9under7atoms_homolumo_eV  # Train homo and lumo simultaneously.
 # dataset=QM9full_homolumo_eV
 # dataset=yourdataset_property_unit
 
