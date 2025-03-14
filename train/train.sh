@@ -4,8 +4,8 @@
 # dataset=QM9under7atoms_atomizationenergy_eV
 # dataset=QM9under14atoms_atomizationenergy_eV
 # dataset=QM9full_atomizationenergy_eV
-dataset=QM9under7atoms_homolumo_eV  # Train homo and lumo simultaneously.
-# dataset=QM9full_homolumo_eV
+# dataset=QM9under7atoms_homolumo_eV  # Train homo and lumo simultaneously.
+dataset=QM9full_homolumo_eV
 # dataset=yourdataset_property_unit
 
 # Basis set and grid field used in preprocessing.
@@ -20,8 +20,8 @@ hidden_HK=250
 layer_HK=3
 
 # Operation for final layer.
-operation=sum  # For energy (i.e., a property proportional to the molecular size).
-# operation=mean  # For homo and lumo (i.e., a property unrelated to the molecular size or the unit is e.g., eV/atom).
+# operation=sum  # For energy (i.e., a property proportional to the molecular size).
+operation=mean  # For homo and lumo (i.e., a property unrelated to the molecular size or the unit is e.g., eV/atom).
 
 # Setting of optimization.
 batch_size=4
