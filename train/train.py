@@ -407,3 +407,7 @@ if __name__ == "__main__":
         print(result)
 
     print('The training has finished.')
+    
+    model.to('cpu')  # Перемещаем модель на CPU для совместимости
+    with open(file_model + '.pickle', 'wb') as f:
+        pickle.dump(model, f)
