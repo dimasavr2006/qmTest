@@ -70,8 +70,10 @@ def create_potential(distance_matrix, atomic_numbers):
     return -np.matmul(Gaussians, atomic_numbers)
 
 
+# def create_dataset(dir_dataset, filename, basis_set,
+#                    radius, grid_interval, orbital_dict, property=True):
 def create_dataset(dir_dataset, filename, basis_set,
-                   radius, grid_interval, orbital_dict, property=True):
+                 radius, grid_interval, orbital_dict, property=False):
 
     """Directory of a preprocessed dataset."""
     if property:
