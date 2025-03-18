@@ -85,6 +85,6 @@ if __name__ == "__main__":
                 '--' + setting + '.txt')
     tester.save_prediction(prediction, filename)
 
-    print('MAE:', MAE)
+    # print('MAE:', MAE)
 
     print('The prediction has finished.')
