@@ -73,7 +73,7 @@ def create_potential(distance_matrix, atomic_numbers):
 # def create_dataset(dir_dataset, filename, basis_set,
 #                    radius, grid_interval, orbital_dict, property=True):
 def create_dataset(dir_dataset, filename, basis_set,
-                 radius, grid_interval, orbital_dict, property=False):
+                 radius, grid_interval, orbital_dict, property=True):
 
     """Directory of a preprocessed dataset."""
     if property:
