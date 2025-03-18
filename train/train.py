@@ -213,6 +213,32 @@ class Tester(object):
     def __init__(self, model):
         self.model = model
 
+    # Новый метод для предсказания
+    def predict(self, dataloader, time=False):
+        IDs, predictions = [], []
+        start = timeit.default_timer()
+        for i, data in enumerate(dataloader):
+            # Вызываем модель в режиме предсказания
+            idx, E_ = self.model.forward(data, predict=True)
+            IDs.extend(list(idx))
+            predictions.extend(E_.tolist())
+
+            if time and i == 0:
+                t = timeit.default_timer() - start
+                minutes = len(dataloader) * t / 60
+                hours = int(minutes / 60)
+                minutes = int(minutes - 60 * hours)
+                print('The prediction will finish in about', hours, 'hours', minutes, 'minutes.')
+
+        # Формируем строку результата
+        prediction_str = 'ID\tPredict\n'
+        for id, pred in zip(IDs, predictions):
+            # Предполагается, что pred — это список из двух значений: [HOMO, LUMO]
+            pred_str = ', '.join(str(x) for x in pred)
+            prediction_str += f'{id}\t{pred_str}\n'
+        return prediction_str
+
+    
     def test(self, dataloader, time=False):
         N = sum([len(data[0]) for data in dataloader])
         IDs, Es, Es_ = [], [], []
