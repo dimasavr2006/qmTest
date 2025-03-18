@@ -7,6 +7,8 @@ import pickle
 import shutil
 import sys
 
+from train.train import QuantumDeepField
+
 sys.path.append('../')
 from train import preprocess as pp
 
