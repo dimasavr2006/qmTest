@@ -27,7 +27,8 @@ class QuantumDeepField(nn.Module):
         nn.init.ones_(self.zeta.weight)  # Initialize each zeta with one.
         self.W_functional = nn.ModuleList([nn.Linear(dim, dim)
                                            for _ in range(layer_functional)])
-        self.W_property = nn.Linear(dim, N_output)
+        # self.W_property = nn.Linear(dim, N_output)
+        self.W_property = nn.Linear(250, 2)
         self.W_density = nn.Linear(1, hidden_HK)
         self.W_HK = nn.ModuleList([nn.Linear(hidden_HK, hidden_HK)
                                    for _ in range(layer_HK)])
