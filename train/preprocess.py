@@ -128,7 +128,8 @@ def create_dataset(dir_dataset, filename, basis_set,
 
         """Load the 3D molecular structure data."""
         for atom_xyz in atom_xyzs:
-            atom, x, y, z = atom_xyz.split()
+            # atom, x, y, z = atom_xyz.split()
+            atom, x, y, z = atom_xyz.strip().split()
             atoms.append(atom)
             atomic_number = atomicnumber_dict[atom]
             atomic_numbers.append([atomic_number])
