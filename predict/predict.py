@@ -80,7 +80,8 @@ if __name__ == "__main__":
           'The prediction result is saved in the output directory.\n'
           'Wait for a while...')
 
-    MAE, prediction = tester.test(dataloader_test, time=True)
+    # MAE, prediction = tester.test(dataloader_test, time=True)
+    prediction = tester.predict(dataloader_test, time=True)
     filename = ('../output/prediction--' + dataset_predict +
                 '--' + setting + '.txt')
     tester.save_prediction(prediction, filename)
