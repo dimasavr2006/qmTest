@@ -129,6 +129,10 @@ def create_dataset(dir_dataset, filename, basis_set,
         """Load the 3D molecular structure data."""
         for atom_xyz in atom_xyzs:
             # atom, x, y, z = atom_xyz.split()
+            parts = atom_xyz.strip().split()
+            if len(parts) != 4:
+              print(f"Ошибка в строке: {atom_xyz}")  # Поможет найти проблему
+              continue
             atom, x, y, z = atom_xyz.strip().split()
             atoms.append(atom)
             atomic_number = atomicnumber_dict[atom]
