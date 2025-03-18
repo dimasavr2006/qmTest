@@ -409,5 +409,8 @@ if __name__ == "__main__":
     print('The training has finished.')
     
     # model.to('cpu')  # Перемещаем модель на CPU для совместимости
-    with open(file_model + '.pickle', 'wb') as f:
+    with open(file_model + '_model.pickle', 'wb') as f:
         pickle.dump(model, f)
+    orbital_dict_filename = dir_dataset + 'orbitaldict_' + basis_set + '.pickle'
+    with open(orbital_dict_filename, 'wb') as f:
+    pickle.dump(orbital_dict, f)
