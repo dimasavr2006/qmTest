@@ -447,20 +447,20 @@ if __name__ == "__main__":
 
 #     print('Training dataset...')
 #     create_dataset(dir_dataset, 'train',
-                   basis_set, radius, grid_interval, orbital_dict)
-    print('-'*50)
+#                    basis_set, radius, grid_interval, orbital_dict)
+#     print('-'*50)
 
-    print('Validation dataset...')
-    create_dataset(dir_dataset, 'val',
-                   basis_set, radius, grid_interval, orbital_dict)
-    print('-'*50)
+#     print('Validation dataset...')
+#     create_dataset(dir_dataset, 'val',
+#                    basis_set, radius, grid_interval, orbital_dict)
+#     print('-'*50)
 
-    print('Test dataset...')
-    create_dataset(dir_dataset, 'test',
-                   basis_set, radius, grid_interval, orbital_dict)
-    print('-'*50)
+#     print('Test dataset...')
+#     create_dataset(dir_dataset, 'test',
+#                    basis_set, radius, grid_interval, orbital_dict)
+#     print('-'*50)
 
-    with open(dir_dataset + 'orbitaldict_' + basis_set + '.pickle', 'wb') as f:
-        pickle.dump(dict(orbital_dict), f)
+#     with open(dir_dataset + 'orbitaldict_' + basis_set + '.pickle', 'wb') as f:
+#         pickle.dump(dict(orbital_dict), f)
 
-    print('The preprocess has finished.')
+#     print('The preprocess has finished.')
