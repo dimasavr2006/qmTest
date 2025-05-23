@@ -14,8 +14,8 @@ operation=mean
 batch_size=4
 lr=1e-4
 lr_decay=0.5
-step_size=200
-iteration=2000
+step_size=500
+iteration=550
 num_workers=4
 setting=$dataset_trained--$basis_set--radius$radius--grid_interval$grid_interval--dim$dim--layer_functional$layer_functional--hidden_HK$hidden_HK--layer_HK$layer_HK--$operation--batch_size$batch_size--lr$lr--lr_decay$lr_decay--step_size$step_size--iteration$iteration
 
