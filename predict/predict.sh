@@ -2,7 +2,7 @@
 
 # Dataset, model, and hyperparameter settings used in pre-training.
 # dataset_trained=QM9under14atoms_atomizationenergy_eV
-dataset_trained=QM9under7atoms_homolumo_eV
+dataset_trained=QM9full_homolumo_eV
 basis_set=6-31G
 radius=0.75
 grid_interval=0.3
