@@ -4,7 +4,7 @@
 # dataset_trained=QM9under14atoms_atomizationenergy_eV
 # dataset_trained=QM9full_atomizationenergy_eV
 # dataset_trained=QM9full_homolumo_eV  # Two properties (homo and lumo).
-dataset_trained=QM9under7atoms_homolumo_eV
+dataset_trained=QM9full_homolumo_eV
 # dataset_trained=yourdataset_property_unit
 
 # Basis set and grid field used in pre-training.
