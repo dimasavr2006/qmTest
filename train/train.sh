@@ -5,8 +5,8 @@
 # dataset=QM9under14atoms_atomizationenergy_eV
 # dataset=QM9full_atomizationenergy_eV
 # dataset=QM9under7atoms_homolumo_eV  # Train homo and lumo simultaneously.
-# dataset=QM9full_homolumo_eV
-dataset=QM9under7atoms_homolumo_eV
+dataset=QM9full_homolumo_eV
+# dataset=QM9under7atoms_homolumo_eV
 # dataset=yourdataset_property_unit
 
 # Basis set and grid field used in preprocessing.
@@ -28,8 +28,8 @@ operation=mean  # For homo and lumo (i.e., a property unrelated to the molecular
 batch_size=4
 lr=1e-4
 lr_decay=0.5
-step_size=200
-iteration=2000
+step_size=500
+iteration=550
 
 # num_workers=0
 num_workers=4
